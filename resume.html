@@ -16,7 +16,7 @@
         <nav>
             <ul>
                 <li><a href = "index.html">Home</a></li>
-                <li><a href = "resume.html">Resumes</a></li>
+                <li><a href = "resume.html" class="active">Resumes</a></li>
                 <li><a href = "networking_connections.html">Networking & Connections</a></li>
                 <li><a href = "careerexploration.html">Career Exploration</a></li>
             </ul>
@@ -25,7 +25,35 @@
 
     </header>
 <main id="maincontent">
-  
+    <section>
+      <h2>Tip of the Day</h2>
+      <div class="tip-box">
+        <div class="tip-label">TIP OF THE DAY</div>
+        <p id="tip-text"></p>
+      </div>
+      <script>
+        // tips were worded using Claude AI //
+      const tips = [
+        "Tailor your resume to each job posting — mirror the keywords from the job description.",
+        "Connect with UMSI alumni on LinkedIn. A short, genuine message goes a long way.",
+        "Quantify your accomplishments. 'Improved efficiency by 30%' beats 'improved efficiency'.",
+        "Book a CDO coaching appointment before deadlines — slots fill up fast.",
+        "Follow up after networking events with a thank-you message within 24 hours.",
+        "Upload your resume to Career Link so the CDO can give you direct feedback.",
+        "Research a company thoroughly before any interview — know their mission and recent news.",
+        "Practice your elevator pitch: who you are, what you do, and what you're looking for in 30 seconds.",
+       "Attend at least one career event per semester — relationships open doors.",
+       "Save job postings you apply to so you can reference them when interview invites come in.",
+       "Your LinkedIn headline should say more than just 'Student at UMSI' — add your interests or skills.",
+       "Ask for informational interviews — most professionals are happy to chat for 20 minutes.",
+    ];
+
+      const today = new Date();
+      const index = (today.getFullYear() * 365 + today.getMonth() * 31 + today.getDate()) % tips.length;
+     document.getElementById('tip-text').textContent = tips[index];
+    </script>
+  </section>
+
   <section>
     <h2>Craft a Resume that Tells Your Story</h2>
     <p>
@@ -106,10 +134,7 @@
   </section>
           <!-- Content taken & modified from UMGPT with the prompt, "for the same content write me some intro content and resources for a resume page" - this was after I had asked for content for the home page.
         UMGPT. (2025). UMGPT (GPT-4.1 August 25th version) [Large language model]. -->
-
-<div>[Enter more of your own content here - that includes changing the content of this page from Academic support to something else!]</div>
-
-    
+  
         <div></div>
         <div></div>
         <div></div>
